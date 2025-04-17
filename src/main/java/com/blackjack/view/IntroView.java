@@ -1,6 +1,5 @@
 package com.blackjack.view;
 
-import com.blackjack.controller.IntroController;
 import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
 

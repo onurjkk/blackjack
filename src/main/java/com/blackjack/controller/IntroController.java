@@ -5,6 +5,7 @@ import com.blackjack.view.MainView;
 import javafx.fxml.FXML;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
@@ -31,7 +32,7 @@ public class IntroController {
 
         Stage stage = IntroView.getStage();
 
-        Scene scene = new Scene(mainView.getLoader().load(), 600,600);
+        Scene scene = new Scene(mainView.getLoader().load(), 600,400);
 
         stage.setScene(scene);
         stage.setTitle("Blackjack");

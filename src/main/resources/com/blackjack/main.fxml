@@ -1,11 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.blackjack.controller.MainController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="pane" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.blackjack.controller.MainController">
    <children>
-      <Label fx:id="lblProva" layoutX="247.0" layoutY="192.0" onMouseClicked="#prova" prefHeight="17.0" prefWidth="150.0" text="gay" />
+      <HBox fx:id="playerHBox" layoutX="17.0" layoutY="220.0" prefHeight="150.0" prefWidth="350.0">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@carte/quadri/9.png" />
+               </image>
+            </ImageView>
+         </children>
+      </HBox>
+      <HBox fx:id="dealerHBox" layoutX="17.0" layoutY="32.0" prefHeight="150.0" prefWidth="350.0">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@carte/quadri/9.png" />
+               </image>
+            </ImageView>
+         </children>
+      </HBox>
+      <VBox layoutX="432.0" layoutY="220.0" prefHeight="150.0" prefWidth="136.0">
+         <children>
+            <Button fx:id="btnCarta" mnemonicParsing="false" prefHeight="37.0" prefWidth="136.0" text="Carta" />
+            <Button fx:id="btnPassa" mnemonicParsing="false" prefHeight="37.0" prefWidth="136.0" text="Passa" />
+            <Button fx:id="btnSplit" mnemonicParsing="false" prefHeight="37.0" prefWidth="136.0" text="Split" />
+            <Button fx:id="btnRaddoppia" mnemonicParsing="false" prefHeight="37.0" prefWidth="136.0" text="Raddoppia" />
+         </children>
+      </VBox>
    </children>
-</AnchorPane>
+</Pane>

@@ -8,7 +8,7 @@ public class Carta {
     public Carta(int valore, String seme) {
         this.valore = valore;
         this.seme = seme;
-        this.percorso = "/images/" + seme + " (" + valore + ").png";
+        this.percorso = "/images/"+seme+"/"+valore+".jpg";
     }
 
     public int getValore() {
