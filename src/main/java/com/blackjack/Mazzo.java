@@ -1,19 +1,46 @@
 package com.blackjack;
 
-import java.util.ArrayList;
+
+import java.util.Collections;
+import java.util.Stack;
 
 public class Mazzo {
 
-    static ArrayList<Carta> carte;
+    static Stack<Carta> carte;
 
     public Mazzo() {
-        carte = new ArrayList<>(52);
+        carte = new Stack<>();
         for(int i=1; i<=13; i++) {
-            carte.add(new Carta(i,"cuori"));
-            carte.add(new Carta(i,"fiori"));
-            carte.add(new Carta(i,"picche"));
-            carte.add(new Carta(i,"quadri"));
+            carte.add(new Carta("cuori",i));
+            carte.add(new Carta("fiori",i));
+            carte.add(new Carta("picche",i));
+            carte.add(new Carta("quadri",i));
         }
+        shuffle();
+    }
+
+    public void reset() {
+        carte = new Stack<>();
+        for(int i=1; i<=13; i++) {
+            carte.add(new Carta("cuori",i));
+            carte.add(new Carta("fiori",i));
+            carte.add(new Carta("picche",i));
+            carte.add(new Carta("quadri",i));
+        }
+        shuffle();
+    }
+
+    public void shuffle() {
+        Collections.shuffle(carte);
+    }
+
+    public Carta getCarta() {
+        return carte.pop();
+    }
+
+    @Override
+    public String toString() {
+        return carte+"";
     }
 
 }

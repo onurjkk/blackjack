@@ -1,14 +1,13 @@
 package com.blackjack;
 
 public class Carta {
-    int valore;
-    String seme;
-    String percorso;
 
-    public Carta(int valore, String seme) {
-        this.valore = valore;
+    private int valore;
+    private String seme;
+
+    public Carta(String seme, int valore) {
         this.seme = seme;
-        this.percorso = "/images/"+seme+"/"+valore+".jpg";
+        this.valore = valore;
     }
 
     public int getValore() {
@@ -27,11 +26,8 @@ public class Carta {
         this.seme = seme;
     }
 
-    public String getPercorso() {
-        return percorso;
-    }
-
-    public void setPercorso(String percorso) {
-        this.percorso = percorso;
+    @Override
+    public String toString() {
+        return "Carta{seme=" + seme + ",valore=" + valore + "}";
     }
 }
