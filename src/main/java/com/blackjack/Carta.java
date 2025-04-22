@@ -2,19 +2,13 @@ package com.blackjack;
 
 public class Carta {
 
-    private int valore;
     private String seme;
+    private String rango;
+    private int valore;
 
-    public Carta(String seme, int valore) {
+    public Carta(String seme, String rango ,int valore) {
         this.seme = seme;
-        this.valore = valore;
-    }
-
-    public int getValore() {
-        return valore;
-    }
-
-    public void setValore(int valore) {
+        this.rango = rango;
         this.valore = valore;
     }
 
@@ -22,12 +16,16 @@ public class Carta {
         return seme;
     }
 
-    public void setSeme(String seme) {
-        this.seme = seme;
+    public String getRango() {
+        return rango;
+    }
+
+    public int getValore() {
+        return valore;
     }
 
     @Override
     public String toString() {
-        return "Carta{seme=" + seme + ",valore=" + valore + "}";
+        return "Carta{seme=" + seme + ",rango="+ rango +",valore=" + valore + "}";
     }
 }

@@ -2,45 +2,28 @@ package com.blackjack;
 
 
 import java.util.Collections;
-import java.util.Stack;
+import java.util.ArrayList;
 
 public class Mazzo {
 
-    static Stack<Carta> carte;
+    private ArrayList<Carta> carte;
 
     public Mazzo() {
-        carte = new Stack<>();
-        for(int i=1; i<=13; i++) {
-            carte.add(new Carta("cuori",i));
-            carte.add(new Carta("fiori",i));
-            carte.add(new Carta("picche",i));
-            carte.add(new Carta("quadri",i));
+        carte = new ArrayList<>();
+        
+        String[] semi = {"cuori","quadri","fiori","picche"};
+        String[] ranghi = {"2","3","4","5","6","7","8","9","10","J","Q","K","A"};
+        int[] valori = {2,3,4,5,6,7,8,9,10,10,10,10,11};
+        
+        for(String seme: semi) {
+            for(int i=0; i<ranghi.length; i++) {
+                carte.add(new Carta(seme,ranghi[i],valori[i]));
+            }
         }
-        shuffle();
-    }
-
-    public void reset() {
-        carte = new Stack<>();
-        for(int i=1; i<=13; i++) {
-            carte.add(new Carta("cuori",i));
-            carte.add(new Carta("fiori",i));
-            carte.add(new Carta("picche",i));
-            carte.add(new Carta("quadri",i));
-        }
-        shuffle();
-    }
-
-    public void shuffle() {
         Collections.shuffle(carte);
     }
 
     public Carta getCarta() {
-        return carte.pop();
+        return carte.remove(0);
     }
-
-    @Override
-    public String toString() {
-        return carte+"";
-    }
-
 }

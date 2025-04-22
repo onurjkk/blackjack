@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
 <?import javafx.scene.image.*?>
 <?import java.lang.*?>
 <?import javafx.scene.control.*?>
@@ -32,5 +33,15 @@
             <Button fx:id="btnSplit" disable="true" mnemonicParsing="false" onMouseClicked="#split" prefHeight="37.0" prefWidth="136.0" text="Split" />
          </children>
       </VBox>
+      <Label fx:id="lblDealer" layoutX="660.0" layoutY="98.0" prefHeight="30.0" prefWidth="110.0" text="Dealer: ">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblPlayer" layoutX="664.0" layoutY="268.0" prefHeight="30.0" prefWidth="110.0" text="Player: " textFill="#ff0101">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
    </children>
 </Pane>
