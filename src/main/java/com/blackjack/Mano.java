@@ -30,10 +30,4 @@ public class Mano {
     public ArrayList<Carta> getCarte() {
         return carte;
     }
-
-    @Override
-    public String toString() {
-        return carte.toString() + "(" + getValore() + ")";
-    }
-
 }

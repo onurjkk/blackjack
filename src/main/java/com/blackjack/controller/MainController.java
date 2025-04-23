@@ -3,7 +3,6 @@ package com.blackjack.controller;
 
 import com.blackjack.BlackjackGame;
 import com.blackjack.Carta;
-import com.blackjack.Mazzo;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -12,6 +11,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.Pane;
 
 public class MainController {
 
@@ -29,6 +29,15 @@ public class MainController {
     public Label lblPlayer;
     @FXML
     public Label lblDealer;
+    @FXML
+    public Button btnRigioca;
+    @FXML
+    public Button btnEsci;
+    @FXML
+    public Label lblFine;
+    @FXML
+    public Pane paneFine;
+
 
     private BlackjackGame blackjack;
 
@@ -52,7 +61,7 @@ public class MainController {
         updateUI();
 
         if(!continuaGioco) {
-            System.out.println("hai sballato!");
+            finePartita("Hai sballato!");
             btnCarta.setDisable(true);
             btnPassa.setDisable(true);
             updateUI();
@@ -67,9 +76,9 @@ public class MainController {
         updateUI();
 
         switch(risultato) {
-            case -1 -> System.out.println("hai perso!");
-            case 0 -> System.out.println("hai pareggiato!"); 
-            case 1 -> System.out.println("hai vinto");
+            case BlackjackGame.PERSO -> finePartita("Hai perso!");
+            case BlackjackGame.PAREGGIO -> finePartita("Hai pareggiato!"); 
+            case BlackjackGame.VINTO -> finePartita("Hai vinto!");
         }
 
         btnCarta.setDisable(true);
@@ -82,6 +91,30 @@ public class MainController {
         System.out.println("split");
     }
 
+    @FXML
+    public void rigioca(MouseEvent mouseEvent) {
+        blackjack.reset();
+
+        paneFine.setDisable(true);
+        paneFine.setOpacity(0);
+
+        btnCarta.setDisable(false);
+        btnPassa.setDisable(false);
+
+        updateUI();
+    }
+
+    @FXML
+    public void esci(MouseEvent mouseEvent) {
+        System.exit(0);
+    }
+
+
+    public void finePartita(String message) {
+        paneFine.setDisable(false);
+        paneFine.setOpacity(1);
+        lblFine.setText(message);
+    }
 
     public ImageView getCartaImage(Carta carta) {
 
@@ -113,6 +146,5 @@ public class MainController {
         }
 
     }
-
 
 }

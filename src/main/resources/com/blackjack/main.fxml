@@ -8,24 +8,8 @@
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="488.0" prefWidth="831.0" styleClass="pane" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.blackjack.controller.MainController">
    <children>
-      <HBox fx:id="playerHBox" layoutX="24.0" layoutY="309.0" prefHeight="150.0" prefWidth="600.0">
-         <children>
-            <ImageView fitHeight="150.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@carte/quadri/9.png" />
-               </image>
-            </ImageView>
-         </children>
-      </HBox>
-      <HBox fx:id="dealerHBox" layoutX="17.0" layoutY="32.0" prefHeight="150.0" prefWidth="600.0">
-         <children>
-            <ImageView fitHeight="150.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@carte/quadri/9.png" />
-               </image>
-            </ImageView>
-         </children>
-      </HBox>
+      <HBox fx:id="playerHBox" layoutX="24.0" layoutY="309.0" prefHeight="150.0" prefWidth="600.0" />
+      <HBox fx:id="dealerHBox" layoutX="17.0" layoutY="32.0" prefHeight="150.0" prefWidth="600.0" />
       <VBox layoutX="664.0" layoutY="327.0" prefHeight="114.0" prefWidth="136.0">
          <children>
             <Button fx:id="btnCarta" disable="true" mnemonicParsing="false" onMouseClicked="#carta" prefHeight="39.0" prefWidth="136.0" text="Carta" />
@@ -43,5 +27,28 @@
             <Font name="System Bold" size="20.0" />
          </font>
       </Label>
+      <Pane fx:id="paneFine" disable="true" layoutX="243.0" layoutY="214.0" opacity="0.0" prefHeight="114.0" prefWidth="292.0" style="-fx-border-color: black; -fx-background-color: #186b0a;">
+         <children>
+            <Label fx:id="lblFine" alignment="CENTER" layoutY="7.0" prefHeight="59.0" prefWidth="292.0" text="Hai Vinto!" textAlignment="CENTER" textFill="RED">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <HBox layoutX="30.0" layoutY="66.0" prefHeight="4.0" prefWidth="233.0">
+               <children>
+                  <Button fx:id="btnRigioca" mnemonicParsing="false" onMouseClicked="#rigioca" prefHeight="39.0" prefWidth="173.0" text="Rigioca">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnEsci" mnemonicParsing="false" onMouseClicked="#esci" prefHeight="69.0" prefWidth="173.0" text="Esci">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </Pane>
    </children>
 </Pane>

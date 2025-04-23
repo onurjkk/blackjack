@@ -23,9 +23,4 @@ public class Carta {
     public int getValore() {
         return valore;
     }
-
-    @Override
-    public String toString() {
-        return "Carta{seme=" + seme + ",rango="+ rango +",valore=" + valore + "}";
-    }
 }

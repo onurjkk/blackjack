@@ -4,9 +4,9 @@ import java.util.ArrayList;
 
 public class BlackjackGame {
     
-    public static int VINTO = 1;
-    public static int PAREGGIO = 0;
-    public static int PERSO = -1;
+    public static final int VINTO = 1;
+    public static final int PAREGGIO = 0;
+    public static final int PERSO = -1;
 
     private Mazzo mazzo;
     private Mano playerMano;
@@ -55,6 +55,10 @@ public class BlackjackGame {
         if(dealerValore > 21 || playerValore > dealerValore) return VINTO;
         else if(playerValore == dealerValore) return PAREGGIO;
         else return PERSO;
+    }
+
+    public void reset() {
+        start();
     }
 
 }
