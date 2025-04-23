@@ -10,14 +10,13 @@
    <children>
       <HBox fx:id="playerHBox" layoutX="24.0" layoutY="309.0" prefHeight="150.0" prefWidth="600.0" />
       <HBox fx:id="dealerHBox" layoutX="17.0" layoutY="32.0" prefHeight="150.0" prefWidth="600.0" />
-      <VBox layoutX="664.0" layoutY="327.0" prefHeight="114.0" prefWidth="136.0">
+      <VBox layoutX="664.0" layoutY="327.0" prefHeight="78.0" prefWidth="136.0">
          <children>
             <Button fx:id="btnCarta" disable="true" mnemonicParsing="false" onMouseClicked="#carta" prefHeight="39.0" prefWidth="136.0" text="Carta" />
             <Button fx:id="btnPassa" disable="true" mnemonicParsing="false" onMouseClicked="#passa" prefHeight="37.0" prefWidth="136.0" text="Passa" />
-            <Button fx:id="btnSplit" disable="true" mnemonicParsing="false" onMouseClicked="#split" prefHeight="37.0" prefWidth="136.0" text="Split" />
          </children>
       </VBox>
-      <Label fx:id="lblDealer" layoutX="660.0" layoutY="98.0" prefHeight="30.0" prefWidth="110.0" text="Dealer: ">
+      <Label fx:id="lblDealer" layoutX="660.0" layoutY="98.0" prefHeight="30.0" prefWidth="110.0" text="Dealer: " textFill="WHITE">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>

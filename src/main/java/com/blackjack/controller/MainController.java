@@ -24,8 +24,6 @@ public class MainController {
     @FXML
     public Button btnPassa;
     @FXML
-    public Button btnSplit;
-    @FXML
     public Label lblPlayer;
     @FXML
     public Label lblDealer;
@@ -84,11 +82,6 @@ public class MainController {
         btnCarta.setDisable(true);
         btnPassa.setDisable(true);
 
-    }
-
-    @FXML
-    public void split(MouseEvent mouseEvent) {
-        System.out.println("split");
     }
 
     @FXML
