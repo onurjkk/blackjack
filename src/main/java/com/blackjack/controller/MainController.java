@@ -103,13 +103,13 @@ public class MainController {
     }
 
 
-    public void finePartita(String message) {
+    private void finePartita(String message) {
         paneFine.setDisable(false);
         paneFine.setOpacity(1);
         lblFine.setText(message);
     }
 
-    public ImageView getCartaImage(Carta carta) {
+    private ImageView getCartaImage(Carta carta) {
 
         ImageView image = new ImageView(new Image(getClass().getResource("/com/blackjack/carte/"+ carta.getSeme() +"/"+ carta.getRango() +".png").toExternalForm()));
         image.setFitHeight(150);
