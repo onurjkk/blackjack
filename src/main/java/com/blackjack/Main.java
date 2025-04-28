@@ -16,6 +16,7 @@ public class Main extends Application {
 
         Scene scene = new Scene(introView.getLoader().load());
 
+        
         stage.getIcons().add(new Image(getClass().getResourceAsStream("icon.jpg")));
         stage.setScene(scene);
         stage.setTitle("Blackjack");
