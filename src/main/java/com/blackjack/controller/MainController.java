@@ -59,7 +59,19 @@ public class MainController {
         updateUI();
 
         if(!continuaGioco) {
-            finePartita("Hai sballato!");
+            int ris = blackjack.dealerTurno();
+            switch (ris){
+                case BlackjackGame.PERSO -> {
+                    if (blackjack.getDealerValore() > 21) {
+                        finePartita("Hai pareggiato!");
+                    } else {
+                        finePartita("Hai Vinto!");
+                    }
+                }
+                case BlackjackGame.PAREGGIO -> finePartita("Hai pareggiato!");
+                case BlackjackGame.VINTO -> finePartita("Vince Banco!");
+            }
+            //finePartita("Hai sballato!");
             btnCarta.setDisable(true);
             btnPassa.setDisable(true);
             updateUI();
