@@ -18,7 +18,9 @@ public class Main extends Application {
 
         
         stage.getIcons().add(new Image(getClass().getResourceAsStream("icon.jpg")));
+        stage.setResizable(false);
         stage.setScene(scene);
+        stage.centerOnScreen();
         stage.setTitle("Blackjack");
         stage.show();
 

@@ -32,8 +32,9 @@ public class IntroController {
         Stage stage = IntroView.getStage();
 
         Scene scene = new Scene(mainView.getLoader().load(), 831,488);
-
+        stage.setResizable(false);
         stage.setScene(scene);
+        stage.centerOnScreen();
         stage.setTitle("Blackjack");
         stage.show();
     }
